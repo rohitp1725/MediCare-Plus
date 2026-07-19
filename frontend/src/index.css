@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F2;
+  --color-warm-white: #FFFEF9;
+  --color-sage: #4A7C6F;
+  --color-sage-light: #6B9E90;
+  --color-sage-dark: #2E5248;
+  --color-amber: #D4821A;
+  --color-amber-light: #F0A843;
+  --color-rose: #C4564A;
+  --color-rose-light: #E07A72;
+  --color-slate: #3D4A5C;
+  --color-slate-light: #6B7A90;
+  --color-slate-lighter: #A8B4C4;
+  --color-lavender: #7B6FA0;
+  --color-lavender-light: #A99EC8;
+  --color-ink: #1C2333;
+  --color-paper: #FFFFFF;
+  --color-border: #E2DDD6;
+  --color-border-dark: #C8C2B8;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-sm: 0 1px 4px rgba(28, 35, 51, 0.06);
+  --shadow-md: 0 4px 16px rgba(28, 35, 51, 0.10);
+  --shadow-lg: 0 12px 40px rgba(28, 35, 51, 0.14);
+
+  --font-sans: 'DM Sans', sans-serif;
+  --font-display: 'Fraunces', serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-size: 15px;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-dark);
+    border-radius: 3px;
+  }
+}
+
+@keyframes float-shape {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(15px, 15px) scale(1.02); }
+}
+.animate-float-shape {
+  animation: float-shape 20s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-logo-float {
+  animation: logo-float 3s ease-in-out infinite;
+}
