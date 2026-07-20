@@ -15,12 +15,14 @@ export const PATIENT_NAV: NavItem[] = [
 
 export const CAREGIVER_NAV: NavItem[] = [
   { id: 'cg-home', path: '/caregiver', label: 'Dashboard', emoji: '🏠', section: 'overview', end: true },
+  { id: 'cg-profile', path: '/caregiver/profile', label: 'My Profile', emoji: '👤', section: 'overview' },
   { id: 'cg-patients', path: '/caregiver/patients', label: 'My Patients', emoji: '👥', section: 'overview' },
   { id: 'cg-alerts', path: '/caregiver/alerts', label: 'Alerts', emoji: '🔔', section: 'overview' },
 ]
 
 export const DOCTOR_NAV: NavItem[] = [
   { id: 'doc-home', path: '/doctor', label: 'Dashboard', emoji: '🏠', section: 'overview', end: true },
+  { id: 'doc-profile', path: '/doctor/profile', label: 'My Profile', emoji: '👤', section: 'overview' },
   { id: 'doc-patients', path: '/doctor/patients', label: 'My Patients', emoji: '🧑‍🤝‍🧑', section: 'overview' },
   { id: 'doc-appointments', path: '/doctor/appointments', label: 'Appointments', emoji: '🗓️', section: 'overview' },
   { id: 'doc-alerts', path: '/doctor/alerts', label: 'Alerts', emoji: '🔔', section: 'overview' },

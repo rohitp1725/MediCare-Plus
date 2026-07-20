@@ -15,16 +15,19 @@ import { PatientVitalsPage } from '@/pages/patient/PatientVitalsPage'
 import { PatientSymptomsPage } from '@/pages/patient/PatientSymptomsPage'
 import { PatientAppointmentsPage } from '@/pages/patient/PatientAppointmentsPage'
 import { PatientReportsPage } from '@/pages/patient/PatientReportsPage'
+import { PatientDiseasesPage } from '@/pages/patient/PatientDiseasesPage'
+import { PatientAssistantPage } from '@/pages/patient/PatientAssistantPage'
 import { CaregiverHomePage } from '@/pages/caregiver/CaregiverHomePage'
 import { CaregiverPatientsPage } from '@/pages/caregiver/CaregiverPatientsPage'
 import { CaregiverPatientDetailPage } from '@/pages/caregiver/CaregiverPatientDetailPage'
 import { CaregiverAlertsPage } from '@/pages/caregiver/CaregiverAlertsPage'
+import { CaregiverProfilePage } from '@/pages/caregiver/CaregiverProfilePage'
 import { DoctorHomePage } from '@/pages/doctor/DoctorHomePage'
 import { DoctorPatientsPage } from '@/pages/doctor/DoctorPatientsPage'
 import { DoctorPatientDetailPage } from '@/pages/doctor/DoctorPatientDetailPage'
 import { DoctorAppointmentsPage } from '@/pages/doctor/DoctorAppointmentsPage'
 import { DoctorAlertsPage } from '@/pages/doctor/DoctorAlertsPage'
-import { ComingSoonPage } from '@/pages/ComingSoonPage'
+import { DoctorProfilePage } from '@/pages/doctor/DoctorProfilePage'
 
 export const router = createBrowserRouter([
   { path: '/', element: <RootRedirect /> },
@@ -42,14 +45,14 @@ export const router = createBrowserRouter([
         children: [
           { index: true, element: <PatientHomePage /> },
           { path: 'profile', element: <PatientProfilePage /> },
-          { path: 'diseases', element: <ComingSoonPage emoji="🩺" title="Diseases" /> },
+          { path: 'diseases', element: <PatientDiseasesPage /> },
           { path: 'medicines', element: <PatientMedicinesPage /> },
           { path: 'tracker', element: <PatientTrackerPage /> },
           { path: 'health', element: <PatientVitalsPage /> },
           { path: 'symptoms', element: <PatientSymptomsPage /> },
           { path: 'visits', element: <PatientAppointmentsPage /> },
           { path: 'reports', element: <PatientReportsPage /> },
-          { path: 'assistant', element: <ComingSoonPage emoji="💬" title="AI Assistant" /> },
+          { path: 'assistant', element: <PatientAssistantPage /> },
         ],
       },
     ],
@@ -63,6 +66,7 @@ export const router = createBrowserRouter([
         element: <AppShell />,
         children: [
           { index: true, element: <CaregiverHomePage /> },
+          { path: 'profile', element: <CaregiverProfilePage /> },
           { path: 'patients', element: <CaregiverPatientsPage /> },
           { path: 'patients/:patientId', element: <CaregiverPatientDetailPage /> },
           { path: 'alerts', element: <CaregiverAlertsPage /> },
@@ -79,6 +83,7 @@ export const router = createBrowserRouter([
         element: <AppShell />,
         children: [
           { index: true, element: <DoctorHomePage /> },
+          { path: 'profile', element: <DoctorProfilePage /> },
           { path: 'patients', element: <DoctorPatientsPage /> },
           { path: 'patients/:patientId', element: <DoctorPatientDetailPage /> },
           { path: 'appointments', element: <DoctorAppointmentsPage /> },
