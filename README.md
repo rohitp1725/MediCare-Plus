@@ -159,6 +159,4 @@ All data access is enforced at the database level using **Row Level Security (RL
 
 ---
 
-## License
 
-[MIT](LICENSE)
