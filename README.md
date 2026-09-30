@@ -157,6 +157,6 @@ All data access is enforced at the database level using **Row Level Security (RL
 | `trg_medicine_generate_dose_logs` | DB trigger on `medicines` insert/update | Immediately creates today's logs when a medicine is activated |
 | `trg_patient_conditions_updated_at` | DB trigger on `patient_conditions` update | Keeps `updated_at` timestamps accurate |
 
----
+--
 
 
